@@ -1,0 +1,8 @@
+# Ignoro todo el caché del proyecto entre otros.
+
+*.log
+*.pot
+*.pyc
+__pycache__
+db.sqlite3
+media
