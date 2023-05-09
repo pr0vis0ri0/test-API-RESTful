@@ -3,9 +3,29 @@
 {% block title %} Departamentos {% endblock %}
 {% block content %}
 
-<ul id="departamentos">
+<div class="container">
+    <div class="row">
+    {% for departamento in data %}
+        <div class="col-md-6">
+            <p>{{ departamento.tipo_departamento }}</p>
+        </div>
+    {% endfor %}
+    </div>  
+</div>
 
-</ul>
-
-<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+    $.ajax({
+    type: "GET",
+    dataType: "json",
+    url: "http://localhost:8000/back/get/",
+    success: function (data) {
+        $.each(data, function(index){
+            $('.departamentos').append(data[index].precio_departamento);
+        })
+        },
+    });
+}); -->
+</script>
 {% endblock %}

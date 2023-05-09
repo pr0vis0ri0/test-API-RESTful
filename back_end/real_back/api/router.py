@@ -3,4 +3,5 @@ from real_back.api.views import DepartamentoApiViewSet
 
 router_departamentos = DefaultRouter()
 
-router_departamentos.register(prefix='post',basename='post', viewset=DepartamentoApiViewSet)
+router_departamentos.register(prefix='get',basename='get', 
+                              viewset=DepartamentoApiViewSet)
