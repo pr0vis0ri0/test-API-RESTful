@@ -5,3 +5,5 @@ Este repositorio está creado con el fin de probar cómo funcionaría la conexi�
 Edit 09-05-2023 : Logré que el backend sea una API REST por sí sola y se puede conseguir información como registrar, ahora sólo queda enviar dicha información al frontend.
 
 Edit 09-05-2023 17:16 - Se logró, hice que el backend se conectara con el frontend a través de una petición Ajax y retorne la información en un tipo JSON para después colocarla en un div.
+
+Edit 10-05-2023 : Hice un mayor avance hice que el front recogiese datos del back a través de un requests por medio de las views.py retornando data en formato JSON y mostrándola en bloques de Django con loops for.
