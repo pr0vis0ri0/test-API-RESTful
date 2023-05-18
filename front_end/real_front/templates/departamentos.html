@@ -3,29 +3,26 @@
 {% block title %} Departamentos {% endblock %}
 {% block content %}
 
+<!-- <div class="container">
+    <div class="row">
+    {% for comuna in data %}
+        {% for region in data2 %}
+            {% if comuna.id_region == region.id_region %}
+                <p>Comuna = '{{ comuna.nombre_comuna }}' y Capital de la Región de esa comuna = '{{ region.capital_region}}'</p>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+    </div>  
+</div> -->
+
 <div class="container">
     <div class="row">
-    {% for departamento in data %}
-        <div class="col-md-6">
-            <p>{{ departamento.tipo_departamento }}</p>
-        </div>
+    {% for comuna in data2 %}
+        {% if comuna.id_region == data.id_region %}
+            <p>Comuna = '{{ comuna.nombre_comuna }}' y Capital de la Región de esa comuna = '{{ data.capital_region}}'</p>
+        {% endif %}
     {% endfor %}
     </div>  
 </div>
-
-<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function() {
-    $.ajax({
-    type: "GET",
-    dataType: "json",
-    url: "http://localhost:8000/back/get/",
-    success: function (data) {
-        $.each(data, function(index){
-            $('.departamentos').append(data[index].precio_departamento);
-        })
-        },
-    });
-}); -->
 </script>
 {% endblock %}
