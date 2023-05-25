@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'real_back.apps.RealBackConfig'
+    'real_back',
+    'drf_spectacular',
+    'import_export'
 ]
 
 MIDDLEWARE = [
@@ -124,3 +126,17 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Implementación de Swagger UI
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS' : 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE' : 10,
+    'DEFAULT_SCHEMA_CLASS' : 'drf_spectacular.openapi.AutoSchema'
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE' : 'API',
+    'DESCRIPTION' : 'Proyecto de Programación Web',
+    'VERSION' : '1.0.0',
+}
